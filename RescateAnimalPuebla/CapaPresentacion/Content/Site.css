@@ -1,21 +1,66 @@
-﻿/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
+﻿/* Estilos Generales */
+body {
+    padding-top: 70px; /* Ajuste para la barra de navegación fija */
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F6F1E3; /* Beige Arena */
+    color: #4D5D53; /* Verde Olivo Oscuro */
+}
+
+/* Contenido Principal */
 .body-content {
-    margin-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
-    max-width: 280px;
+/* Barra de Navegación */
+.navbar-light {
+    background-color: #ffffff !important;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .body-content {
-        padding: 0;
+.navbar-brand {
+    font-weight: 700;
+    color: #4D5D53 !important; /* Verde Olivo Oscuro */
+}
+
+.nav-link {
+    color: #4D5D53 !important; /* Verde Olivo Oscuro */
+}
+
+    .nav-link:hover, .dropdown-item:hover {
+        color: #E87A5D !important; /* Naranja Terracota como acento */
     }
+
+/* Botones */
+.btn-primary {
+    background-color: #3D84A8; /* Azul Cerceta */
+    border-color: #3D84A8;
 }
+
+    .btn-primary:hover {
+        background-color: #316a88; /* Un tono más oscuro de Azul Cerceta */
+        border-color: #316a88;
+    }
+
+/* Títulos */
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+/* GridView */
+.gridview {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .gridview th {
+        background-color: #4D5D53;
+        color: #ffffff;
+        padding: 0.75rem;
+    }
+
+    .gridview td {
+        padding: 0.75rem;
+        border-bottom: 1px solid #ddd;
+    }
