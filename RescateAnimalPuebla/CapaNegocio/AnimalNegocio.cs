@@ -41,6 +41,11 @@ namespace CapaNegocio
         {
             _animalDatos.Eliminar(id);
         }
+
+        public DataTable ListarDisponiblesParaAdopcion()
+        {
+            return _animalDatos.ObtenerDisponiblesParaAdopcion();
+        }
     }
     
 }

@@ -119,7 +119,11 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="DetalleAnimal.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="GestionarAnimales.aspx" />
+    <Content Include="GestionarAsociaciones.aspx" />
+    <Content Include="GestionarEstatus.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -206,6 +210,34 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DetalleAnimal.aspx.cs">
+      <DependentUpon>DetalleAnimal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetalleAnimal.aspx.designer.cs">
+      <DependentUpon>DetalleAnimal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionarAnimales.aspx.cs">
+      <DependentUpon>GestionarAnimales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionarAnimales.aspx.designer.cs">
+      <DependentUpon>GestionarAnimales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionarAsociaciones.aspx.cs">
+      <DependentUpon>GestionarAsociaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionarAsociaciones.aspx.designer.cs">
+      <DependentUpon>GestionarAsociaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionarEstatus.aspx.cs">
+      <DependentUpon>GestionarEstatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionarEstatus.aspx.designer.cs">
+      <DependentUpon>GestionarEstatus.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -234,6 +266,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Imagenes\Animales\" />
+    <Folder Include="Imagenes\Logos\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

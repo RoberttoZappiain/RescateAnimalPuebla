@@ -2,43 +2,38 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <main>
-        <section class="row" aria-labelledby="aspnetTitle">
-            <h1 id="aspnetTitle">ASP.NET</h1>
-            <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-            <p><a href="http://www.asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-        </section>
-
-        <div class="row">
-            <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-                <h2 id="gettingStartedTitle">Getting started</h2>
-                <p>
-                    ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-                A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-                </p>
-            </section>
-            <section class="col-md-4" aria-labelledby="librariesTitle">
-                <h2 id="librariesTitle">Get more libraries</h2>
-                <p>
-                    NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-                </p>
-            </section>
-            <section class="col-md-4" aria-labelledby="hostingTitle">
-                <h2 id="hostingTitle">Web Hosting</h2>
-                <p>
-                    You can easily find a web hosting company that offers the right mix of features and price for your applications.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-                </p>
-            </section>
+<main>
+    <div class="container mt-4">
+        <div class="text-center mb-5">
+            <h1 class="display-4">Encuentra a tu Nuevo Mejor Amigo</h1>
+            <p class="lead">Explora los perfiles de los animales que esperan un hogar en los refugios de Puebla.</p>
         </div>
-    </main>
 
+        <asp:Repeater ID="repeaterAnimales" runat="server">
+            <HeaderTemplate>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            </HeaderTemplate>
+            <ItemTemplate>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <asp:Image runat="server" ImageUrl='<%# "~/Imagenes/Animales/" + Eval("RutaFoto") %>' CssClass="card-img-top" style="height: 250px; object-fit: cover;" />
+                        <div class="card-body">
+                            <h5 class="card-title"><%# Eval("NombreComun") %></h5>
+                            <p class="card-text">
+                                <span class="badge bg-success"><%# Eval("Estatus") %></span> <br />
+                                <strong>Refugio:</strong> <%# Eval("NombreAsociacion") %><br />
+                            </p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3">
+                             <asp:HyperLink runat="server" NavigateUrl='<%# "DetalleAnimal.aspx?id=" + Eval("AnimalID") %>' Text="Ver Historia Completa" CssClass="btn btn-primary w-100" />
+                        </div>
+                    </div>
+                </div>
+            </ItemTemplate>
+            <FooterTemplate>
+                </div>
+            </FooterTemplate>
+        </asp:Repeater>
+    </div>
+ </main>
 </asp:Content>
